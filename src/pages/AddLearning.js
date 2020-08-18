@@ -16,7 +16,7 @@ function AddLearning({history}) {
 
   const addLearning = async (learning) => {
     console.log(`learning about to be created: ${JSON.stringify(learning)}`)
-    postLearning(config.API_BASE_URL, learning)
+    await postLearning(config.API_BASE_URL, learning)
   }
 
   const handleChange = (event) => {

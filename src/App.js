@@ -7,7 +7,7 @@ import Navbar from './components/navbar';
 import Navvbarr from './components/Navvbarr';
 
 import Amplify from 'aws-amplify';
-import FlashCardList from "./pages/FlashCardList";
+import LearningList from "./pages/LearningList";
 import AddLearning from './pages/AddLearning'
 
 import aws_exports from './aws-exports';
@@ -24,7 +24,7 @@ function App() {
       <div className="container mt-2" style={{marginTop: 40}}>
         <Switch>
           <Route exact path="/">
-            <FlashCardList/>
+            <LearningList/>
           </Route>
           <Route path="/new">
             <AddLearning/>

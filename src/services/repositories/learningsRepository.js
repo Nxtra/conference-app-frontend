@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-export function postLearning(baseUrl, body) {
-  axios.post( baseUrl + '/learnings', body)
+const LEARNINGS_ENDPOINT = '/learnings';
+
+export async function postLearning(baseUrl, body) {
+  await axios.post(baseUrl + LEARNINGS_ENDPOINT, body)
     .then(function (response) {
       console.log(response);
     })
@@ -10,11 +12,14 @@ export function postLearning(baseUrl, body) {
     });
 }
 
-export async function getAllPokemon(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url).then(res => res.json())
-      .then(data => {
-        resolve(data)
-      })
-  });
+export async function getAllLearnings(baseUrl) {
+  let data;
+  await axios.get(baseUrl + LEARNINGS_ENDPOINT)
+    .then(function (response) {
+      data = response.data;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  return data;
 }
