@@ -10,9 +10,6 @@ import Amplify from 'aws-amplify';
 import LearningList from "./pages/LearningList";
 import AddLearning from './pages/AddLearning'
 
-import aws_exports from './aws-exports';
-
-Amplify.configure(aws_exports);
 
 function App() {
 
