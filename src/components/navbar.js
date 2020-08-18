@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink, withRouter } from "react-router-dom";
-import { Auth } from 'aws-amplify';
 
 
 
@@ -11,10 +10,6 @@ const Navbar = ({history}) => {
     console.log(history)
     history.push("/");
   };
-
-  const signOut = () => {
-    Auth.signOut();
-  }
 
   return (
     <nav
@@ -64,10 +59,6 @@ const Navbar = ({history}) => {
                 <button className="button is-white" onClick={goHome}>
                   Home
                 </button>
-                <button className="button is-white" onClick={signOut}>
-                  Logout
-                </button>
-                {/*<AmplifySignOut className="button is-white"/>*/}
               </div>
             </div>
           </div>

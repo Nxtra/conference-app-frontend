@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { API, graphqlOperation } from "aws-amplify";
 
 
 function FlashCardList() {

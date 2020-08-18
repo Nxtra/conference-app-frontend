@@ -8,7 +8,7 @@ import Navvbarr from './components/Navvbarr';
 
 import Amplify from 'aws-amplify';
 import FlashCardList from "./pages/FlashCardList";
-import AddFlashCard from './pages/AddFlashCard'
+import AddLearning from './pages/AddLearning'
 
 import aws_exports from './aws-exports';
 
@@ -27,7 +27,7 @@ function App() {
             <FlashCardList/>
           </Route>
           <Route path="/new">
-            <AddFlashCard/>
+            <AddLearning/>
           </Route>
         </Switch>
       </div>
