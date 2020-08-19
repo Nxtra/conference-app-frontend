@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import './App.css';
 
-import Navbar from './components/navbar';
 import Navvbarr from './components/Navvbarr';
 
-import Amplify from 'aws-amplify';
 import LearningList from "./pages/LearningList";
 import AddLearning from './pages/AddLearning'
 
